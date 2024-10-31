@@ -1,0 +1,108 @@
+/*Progress Bar Start*/
+/* PROGRESS */
+.Paperprogress {
+    background-color: #e5e9eb;
+    height: 0.25em;
+    position: relative;
+    width: 24em;
+}
+.Paperprogress-bar {
+    animation-duration: 7s;
+    animation-name: width;
+    background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+    background-size: 24em 0.25em;
+    height: 100%;
+    position: relative;
+}
+.Paperprogress-shadow {
+    background-image: linear-gradient(to bottom, #eaecee, transparent);
+    height: 4em;
+    position: absolute;
+    top: 100%;
+    transform: skew(45deg);
+    transform-origin: 0 0;
+    width: 100%;
+}
+
+/* ANIMATIONS */
+@keyframes width {
+    0%,
+    100% {
+        transition-timing-function: cubic-bezier(1, 0, 0.25, 0.45);
+    }
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/*Progress Bar End*/
+/**Loader Start**/
+#airrev-suggest-sp-app.paperloader .container{
+    background-color: #fff;
+}
+#paperloader{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    top:100px;
+    left:50%;
+    margin-left: -25px;
+    z-index: 9;
+    animation-name: spinner 0.4s linear infinite;
+    -webkit-animation: spinner 0.4s linear  infinite;
+    -moz-animation: spinner 0.4s linear  infinite;
+}
+#paperloader:before{
+    position: absolute;
+    content:'';
+    display: block;
+    background-color: darkgrey;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    top: -15px;
+    left: -15px;
+}
+#paperloader:after{
+    position: absolute;
+    content:'';
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border-top:2px solid white;
+    border-bottom:2px solid white;
+    border-left:2px solid white;
+    border-right:2px solid transparent;
+    top: -2px;
+    left: -2px;
+}
+
+@keyframes spinner{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spinner{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@-moz-keyframes spinner{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+/**Loader End**/
+
+.dashboard .slick-next,.dashboard .slick-prev{
+    top: -5px;
+}
+.video{width: auto; margin: auto}
+.dashboard_com_img img {
+    float: right;
+    margin-top: 2rem;
+}
